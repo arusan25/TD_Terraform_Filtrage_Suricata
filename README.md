@@ -136,6 +136,17 @@ sudo tail -f /var/log/suricata/eve.json
 grep -i "TD2" /var/lib/suricata/rules/suricata.rules
 ```
 
+## Captures d'écran des tests
+
+Les captures suivantes (en PNG) montrent les tests réalisés en PowerShell pour valider le déploiement :
+
+- `screenshots/01_terraform_output.png` : `terraform output`
+- `screenshots/02_aws_instances.png` : Instances AWS avec le tag td2-42
+- `screenshots/03_ssh_bastion.png` : Connexion SSH au bastion
+- `screenshots/04_ping_suricata.png` : Ping depuis le bastion vers la sonde (règle Suricata)
+- `screenshots/05_ssh_sonde.png` : Connexion au sonde + vérification Suricata
+- `screenshots/06_ssh_private.png` : Connexion à l'instance privée + test NAT
+
 ## Nettoyage
 
 ```bash
